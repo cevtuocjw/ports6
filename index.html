@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>各国家海港情况汇总</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://api.map.baidu.com/api?v=3.0&ak=E4805d16520de693a3fe707cdc962045" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部标题区域 -->
+        <header class="header glass-effect">
+            <h1 class="title">各国家海港情况汇总</h1>
+            <h2 class="subtitle">深圳市平方科技股份有限公司</h2>
+            <div class="meta-info">
+                <span class="author">author:常经纬</span>
+                <span class="date">date：14thJan2026</span>
+                <span class="version">ver:v1.2</span>
+            </div>
+            <!-- 中英文切换按钮 -->
+            <div class="language-switch">
+                <button id="zh-btn" class="lang-btn active">中文</button>
+                <button id="en-btn" class="lang-btn">English</button>
+            </div>
+        </header>
+
+        <!-- 主要内容区域 -->
+        <main class="main-content">
+            <!-- 各国地图切换标签 -->
+            <div class="country-tabs glass-effect">
+                <button class="tab-btn active" data-country="vietnam">越南</button>
+                <button class="tab-btn" data-country="malaysia">马来西亚</button>
+                <button class="tab-btn" data-country="singapore">新加坡</button>
+                <button class="tab-btn" data-country="brunei">文莱</button>
+                <button class="tab-btn" data-country="indonesia">印尼</button>
+                <button class="tab-btn" data-country="greece">希腊</button>
+            </div>
+
+            <!-- 地图展示区域 -->
+            <div class="map-container glass-effect">
+                <div id="map" class="map"></div>
+            </div>
+
+            <!-- 世界港口吞吐量排名 -->
+            <div class="ranking-container glass-effect">
+                <div class="ranking-header">
+                    <h3 id="ranking-title">世界港口吞吐量排名</h3>
+                    <span id="refresh-time" class="refresh-time">刷新时间：2026-01-14 12:00:00</span>
+                </div>
+                <div class="ranking-list" id="ranking-list">
+                    <!-- 港口排名将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="footer glass-effect">
+            <p>© 2026 深圳市平方科技股份有限公司 版权所有</p>
+        </footer>
+    </div>
+
+    <!-- 港口信息弹窗 -->
+    <div id="port-info" class="port-info glass-effect">
+        <div class="port-info-content">
+            <h4 id="port-name"></h4>
+            <p><strong id="port-teu"></strong></p>
+            <p><strong id="port-growth"></strong></p>
+            <p><strong id="port-quay-cranes"></strong></p>
+            <p><strong id="port-gantry-cranes"></strong></p>
+            <p><strong id="port-gates"></strong></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
